@@ -1,0 +1,16 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="{% static 'catstyle/style.css' %}"
+    <title>Title</title>
+</head>
+<body>
+{% for el in news %}
+<p>{{el.title}}</p>
+<p>{{el.data}}</p>
+<img src="{{el.picture.url}}">
+{% endfor %}
+</body>
+</html>
