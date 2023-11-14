@@ -1,0 +1,17 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="{% static 'newsstyle/style.css' %}"
+    <title>Title</title>
+</head>
+<body class="main">
+
+<p>{{news.title}}</p>
+<p>{{news.data}}</p>
+<img src="{{news.picture.url}}">
+<p>{{news.text}}</p>
+
+</body>
+</html>

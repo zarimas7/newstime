@@ -17,7 +17,7 @@ def index(request):
 
 class NewsDetailView(DetailView):
     model = News
-    template_name = 'main.html'
+    template_name = 'detail.html'
     context_object_name = 'news'
 # Create your views here.
 
