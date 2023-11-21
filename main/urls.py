@@ -2,6 +2,7 @@ from . import views
 from django.urls import path
 
 
-urlpatterns = [path('', views.index),
-path('<int:pk>/', views.NewsDetailView.as_view(), name='mydetail')
+urlpatterns = [path('', views.index,name='main'),
+path('<int:pk>/', views.NewsDetailView.as_view(), name='mydetail'),
+path('reg/', views.UserCustomForm.as_view()),
 ]

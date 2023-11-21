@@ -1,0 +1,20 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="{% static 'catstyle/style.css' %}">
+    <title>Title</title>
+</head>
+<body>
+<form method="post">
+{% csrf_token %}
+{{ form.as_p }}
+<button
+type="submit">Login</button>
+</form>
+{% if user.is_authenticated%}
+<p> Hi, {{user.username}}!</p>
+{% endif %}
+</body>
+</html>
