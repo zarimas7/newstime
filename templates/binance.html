@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Binance Quotes</title>
+</head>
+<body>
+    <h1>Котировки валют</h1>
+    <ul>
+        {% for symbol, price in quotes.items %}
+            <li>{{ symbol }}: {{ price }}</li>
+        {% endfor %}
+    </ul>
+</body>
+</html>
