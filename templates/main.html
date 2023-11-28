@@ -10,15 +10,15 @@
 </head>
 <body class="main">
 <nav class="navbar navbar-expand-lg bg-body-tertiary">
-  <div class="container-fluid">
+  <div class="container-fluid width-100vw">
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
-    <div class="collapse navbar-collapse bg-info" id="navbarTogglerDemo01">
+    <div class="collapse navbar-collapse  bg-info" id="navbarTogglerDemo01">
       <a class="navbar-brand" href="#">NEWSTIME</a>
       <ul class="navbar-nav me-auto mb-2 mb-lg-0">
         <li class="nav-item">
-          <a class="nav-link active" aria-current="page" href="#">Главная страница</a>
+          <a class="nav-link active" aria-current="page" href='{% url 'main' %}'>Главная страница</a>
         </li>
         <li class="nav-item">
           <a class="nav-link" href="#">Полезное</a>
@@ -39,8 +39,12 @@
   <h1 class="first1"><li><p>{{el.title}}</p></li></h1>
 <p>{{el.data}}</p>
 <img src="{{el.picture.url}}">
+
+<br>
+    <br><button><a href='{% url 'mydetail' el.id %}'>Подробнее</a></button>
 {% endfor %}
     </ol>
+
 
 
 
