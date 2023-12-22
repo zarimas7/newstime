@@ -1,11 +1,41 @@
 
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
 
+header {
+    background-color: pink;
+    color: #fff;
+    padding: 10px 0;
+}
 
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    text-align: center;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 15px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #fff;
+}
+
+main {
+    padding: 20px;
+}
 
 
 
 footer {
-    background-color: #333;
+    background-color: pink;
     color: #fff;
     padding: 30px 0;
 }

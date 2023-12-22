@@ -9,49 +9,24 @@
 
     <title></title>
 </head>
-<body class="main">
-<nav class="navbar navbar-expand-lg bg-body-tertiary">
-    <div class="container-fluid width-100vw">
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo01"
-                aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse  bg-info" id="navbarTogglerDemo01">
-            <a class="navbar-brand" href="#">NEWSTIME</a>
-            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                <li class="nav-item">
-                    <a class="nav-link active" aria-current="page" href='{% url "main" %}'>Главная страница</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#">Полезное</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link disabled" aria-disabled="true">CALL-ЦЕНТР</a>
-                </li>
+
+<body>
+ <header>
+        <nav>
+            <ul>
+                <li><a href="#">NEWSTIME</a></li>
+                <li><a href="#">Главная</a></li>
+                <li><a href="#">О нас</a></li>
+                <li><a href="#">Услуги</a></li>
+                <li><a href="#">Контакты</a></li>
             </ul>
-            <form class="d-flex" role="search">
-                <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-                <button class="btn btn-outline-success" type="submit">Search</button>
-            </form>
-        </div>
-    </div>
-</nav>
-<!--<ol>-->
-<!--    {% for el in news %}-->
-<!--    <h1 class="first1">-->
-<!--        <li><p>{{el.title}}</p></li>-->
-<!--    </h1>-->
-<!--    <p>{{el.data}}</p>-->
-<!--    <img src="{{el.picture.url}}">-->
+        </nav>
+    </header>
 
-<!--    <br>-->
-<!--    <button><a href='{% url "mydetail" el.id %}'>Подробнее</a></button>-->
-<!--    {% endfor %}-->
-<!--</ol>-->
 
-<head>
+
     <title>Binance Quotes</title>
-</head>
+
 <h1>Котировки валют</h1>
 <ul>
     {% for symbol, price in quotes.items %}
@@ -70,7 +45,6 @@
                          <img src="{{el.picture.url}}" class="card-img-top" alt="...">
                         <h5 class="card-title">{{ el.title }}</h5>
                         <h6 class="card-subtitle mb-2 text-muted">{{ el.data }}</h6>
-                        <!--                                        <p class="card-text">{{ news_item.news_short_description }}</p>-->
                         <a href='{% url "mydetail" el.id %}'>Подробнее</a>
 
                     </div>
@@ -82,8 +56,7 @@
 </div>
 
 
-<div class="container-fluid">
-    <footer>
+ <footer>
         <div class="footer-container">
             <div class="footer-section">
                 <h3>Контакты</h3>
@@ -111,8 +84,10 @@
             <p>&copy; 2023 Твой сайт</p>
         </div>
     </footer>
-</div>
+
+
 
 
 </body>
+
 </html>
