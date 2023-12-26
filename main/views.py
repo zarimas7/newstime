@@ -59,7 +59,7 @@ class NewsDetailView(DetailView):
         context['images'] = self.object.image_set.all()
         return context
 # Create your views here.
-
-
+def contact(request):
+    return render(request, 'contact.html')
 
 
