@@ -43,11 +43,17 @@ def index(request):
 
 from .forms import UserCustomForm
 
-class UserCustomForm(CreateView):
+from django.contrib.auth.models import User
+from django.urls import reverse_lazy
+from django.views.generic.edit import CreateView
+from .forms import UserCustomForm  # Make sure to import your UserCustomForm from the correct location
+
+class UserRegister(CreateView):
     model = User
     template_name = 'registration/reg.html'
     form_class = UserCustomForm
     success_url = reverse_lazy('login')
+
 
 class NewsDetailView(DetailView):
     model = News
